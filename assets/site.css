@@ -2470,3 +2470,21 @@ html[data-theme="light"] #projects .proj-card .pm-chart .cl{fill:#3b4f66}
 #projects .proj-card .pm-chart .tl-head{fill:var(--c-grn);stroke:none}
 html[data-theme="light"] #projects .proj-card .pm-chart .trend{stroke:url(#tg)}
 html[data-theme="light"] #projects .proj-card .pm-chart .tl-head{fill:var(--c-grn)}
+
+/* ABS chart: more compact */
+#projects .proj-card .pm-rows{margin:0}
+#projects .proj-card .pm-chart{max-width:320px;margin:0 auto}
+#projects .proj-card .proj-metric:has(.pm-chart){padding:10px 14px 11px;gap:2px}
+
+/* skip link */
+.skip-link{position:absolute;left:12px;top:-60px;z-index:1000;padding:10px 16px;border-radius:999px;background:linear-gradient(135deg,#8febff,#a6bfff);color:#06111d!important;font-weight:700;text-decoration:none!important;transition:top .15s ease}
+.skip-link:focus{top:12px;outline:3px solid #fff;outline-offset:2px;box-shadow:0 0 0 6px rgba(69,217,255,.55)}
+html[data-theme="light"] .skip-link:focus{outline-color:#17344e;box-shadow:none}
+#top:focus{outline:none}
+@media print{.skip-link{display:none}}
+
+/* contact roles: readable in both themes */
+.contact-lede strong{color:#fff}
+html[data-theme="light"] .contact-lede strong{color:#000}
+
+@media(min-width:1200px){.contact-roles{display:inline-block;position:relative;left:50%;transform:translateX(-50%);white-space:nowrap}}
