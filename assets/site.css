@@ -2488,3 +2488,74 @@ html[data-theme="light"] .skip-link:focus{outline-color:#17344e;box-shadow:none}
 html[data-theme="light"] .contact-lede strong{color:#000}
 
 @media(min-width:1200px){.contact-roles{display:inline-block;position:relative;left:50%;transform:translateX(-50%);white-space:nowrap}}
+
+/* ===== Experience: timeline rail ===== */
+#experience .timeline{position:relative}
+#experience .timeline::before{content:"";position:absolute;left:189px;top:10px;bottom:10px;width:2px;border-radius:2px;background:linear-gradient(#45d9ff,rgba(69,217,255,.12))}
+#experience .timeline .time{position:relative}
+#experience .timeline .time::after{content:"";position:absolute;right:-16px;top:.32em;width:12px;height:12px;border-radius:50%;background:#45d9ff;box-shadow:0 0 0 4px rgba(69,217,255,.2)}
+#experience .timeline-item:first-child .time::after{background:#54d696;box-shadow:0 0 0 4px rgba(84,214,150,.25)}
+html[data-theme="light"] #experience .timeline::before{background:linear-gradient(#1f6fd1,rgba(31,111,209,.12))}
+html[data-theme="light"] #experience .timeline .time::after{background:#1f6fd1;box-shadow:0 0 0 4px rgba(31,111,209,.18)}
+html[data-theme="light"] #experience .timeline-item:first-child .time::after{background:#2fa56c;box-shadow:0 0 0 4px rgba(47,165,108,.22)}
+@media(max-width:900px){
+  #experience .timeline{padding-left:26px}
+  #experience .timeline::before{left:5px}
+  #experience .timeline .time::after{right:auto;left:-26px;top:.28em}
+}
+
+/* ===== Skills: bento grid ===== */
+#skills .flip-grid{grid-template-columns:repeat(4,minmax(0,1fr))}
+#skills .flip-card:nth-child(1){grid-column:span 2;grid-row:span 2}
+#skills .flip-card:nth-child(4),#skills .flip-card:nth-child(5),#skills .flip-card:nth-child(6){grid-column:span 2}
+#skills .flip-card:nth-child(1) .flip-front h3{font-size:1.6rem}
+#skills .flip-card:nth-child(1) .flip-front p{font-size:1.02rem;margin-bottom:6px}
+.skill-feature{display:flex;flex-direction:column;gap:4px;margin-top:26px}
+.skill-feature-num{font-size:52px;line-height:1;font-weight:800;background:linear-gradient(135deg,#b8f5d5,#8febff);-webkit-background-clip:text;background-clip:text;color:transparent}
+.skill-feature-cap{font-size:.95rem;line-height:1.5;color:var(--muted,#b8c4d6);max-width:30em}
+html:not([data-theme="light"]) #skills .flip-card:nth-child(1) .flip-front{background:linear-gradient(145deg,rgba(69,217,255,.16),rgba(40,45,54,.94) 60%,rgba(31,35,43,.94))!important;border-color:rgba(69,217,255,.4)}
+html[data-theme="light"] #skills .flip-card:nth-child(1) .flip-front{background:linear-gradient(145deg,#d9f1ff,#fff 62%)!important;border-color:#9fd3f0}
+html[data-theme="light"] .skill-feature-num{background:linear-gradient(135deg,#17643f,#1f5fbf);-webkit-background-clip:text;background-clip:text;color:transparent}
+html[data-theme="light"] .skill-feature-cap{color:#3b4f66}
+@media(max-width:1100px){
+  #skills .flip-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  #skills .flip-card:nth-child(1){grid-column:span 2;grid-row:auto}
+  #skills .flip-card:nth-child(4),#skills .flip-card:nth-child(5){grid-column:auto}
+  #skills .flip-card:nth-child(6){grid-column:span 2}
+}
+@media(max-width:620px){
+  #skills .flip-grid{grid-template-columns:minmax(0,1fr)}
+  #skills .flip-card:nth-child(n){grid-column:auto;grid-row:auto}
+  .skill-feature{margin-top:16px}.skill-feature-num{font-size:40px}
+}
+@media print{#skills .flip-card:nth-child(n){grid-column:auto!important;grid-row:auto!important}.skill-feature-num{background:none;color:#000;-webkit-text-fill-color:#000}}
+
+@media(min-width:1101px){#skills .flip-card:nth-child(n+4),#skills .flip-card:nth-child(n+4) .flip-inner{min-height:185px}}
+
+@media(min-width:621px) and (max-width:1100px){#skills .flip-card,#skills .flip-inner{min-height:215px}#skills .flip-card:nth-child(1),#skills .flip-card:nth-child(1) .flip-inner{min-height:310px}#skills .flip-card:nth-child(2),#skills .flip-card:nth-child(2) .flip-inner,#skills .flip-card:nth-child(3),#skills .flip-card:nth-child(3) .flip-inner{min-height:235px}}
+@media(max-width:620px){#skills .flip-card:nth-child(1),#skills .flip-card:nth-child(1) .flip-inner{min-height:420px}}
+
+@media(min-width:1101px){#skills .flip-card:nth-child(2),#skills .flip-card:nth-child(2) .flip-inner,#skills .flip-card:nth-child(3),#skills .flip-card:nth-child(3) .flip-inner{min-height:268px}}
+
+/* more space between timeline rail and cards */
+@media(min-width:901px){#experience .timeline-item{column-gap:40px}}
+
+/* ABS card: photo fading in from the top */
+#projects .proj-card-photo{position:relative;overflow:hidden;isolation:isolate;padding-top:200px!important}
+#projects .proj-card-photo::before{content:"";position:absolute;left:0;right:0;top:0;height:240px;z-index:-1;pointer-events:none;background:url("img/abs-himalayan-sunset.webp") center 58%/cover no-repeat;-webkit-mask-image:linear-gradient(#000 55%,transparent);mask-image:linear-gradient(#000 55%,transparent)}
+@media print{#projects .proj-card-photo{padding-top:26px!important}#projects .proj-card-photo::before{display:none}}
+
+/* photo cards: per-project images */
+#projects .photo-hmi::before{background-image:url("img/photo-hmi-motec.webp");background-size:contain;background-position:center 40%;background-color:#f3f6fa}
+#projects .photo-yaw::before{background-image:url("img/photo-yaw-oversteer.webp");background-size:contain;background-position:center 40%;background-color:#fff}
+#projects .photo-brake::before{background-image:url("img/photo-brake-brembo.webp");background-size:cover;background-position:center 46%}
+#projects .photo-sbw::before{background-image:url("img/photo-sbw-car.webp");background-size:contain;background-position:center 40%;background-color:#fff}
+#projects .photo-hmi::before,#projects .photo-yaw::before,#projects .photo-sbw::before{background-repeat:no-repeat}
+html:not([data-theme="light"]) #projects :is(.photo-hmi,.photo-yaw,.photo-sbw)::before{filter:brightness(.92)}
+
+/* yaw diagram: keep the whole figure above the fade */
+#projects .photo-yaw::before{background-size:auto 172px;background-position:center 8px;-webkit-mask-image:linear-gradient(#000 78%,transparent);mask-image:linear-gradient(#000 78%,transparent)}
+
+/* Rivian hackathon photo header */
+#projects .photo-rivian::before{background-image:url("img/photo-rivian-hackathon.webp");background-size:cover;background-position:center 42%;background-color:#f3f3f4;background-repeat:no-repeat}
+html:not([data-theme="light"]) #projects .photo-rivian::before{filter:brightness(.92)}
