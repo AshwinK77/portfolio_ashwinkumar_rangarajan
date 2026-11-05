@@ -15,40 +15,289 @@ body{font-family:Inter,system-ui,sans-serif;font-size:16px;line-height:1.7}
 .sections{display:block}.sections>.panel{width:100%;margin:0}
 .sections>[hidden]{display:none!important}
 .panel p,.panel li,.lede,.responsibilities-overview{font-size:inherit;line-height:inherit}
-</style><style id="remove-repeated-tab-headings">.sections > .panel > h2{display:none!important}</style><script id="portfolio-analytics">
-(function () {
-  var option = new URLSearchParams(location.search).get('analytics');
-  var excluded = option === 'off';
-  try {
-    if (option === 'off') localStorage.setItem('portfolio.analytics.disabled', '1');
-    if (option === 'on') localStorage.removeItem('portfolio.analytics.disabled');
-    excluded = excluded || localStorage.getItem('portfolio.analytics.disabled') === '1';
-  } catch (error) { excluded = true; }
-  var host = location.hostname;
-  var local = location.protocol === 'file:' || host === 'localhost' || host.endsWith('.localhost') || host === '::1' || host === '[::1]' || /^127\./.test(host) || /^192\.168\./.test(host) || /^10\./.test(host) || /^172\.(1[6-9]|2[0-9]|3[01])\./.test(host);
-  if (excluded || local) return;
-  (function(c,l,a,r,i,t,y){
-    c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-    t=l.createElement(r);t.async=1;t.src='https://www.clarity.ms/tag/'+i;
-    y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-  })(window, document, 'clarity', 'script', 'yt518xz650');
-})();
-</script>
-</head><body><header class="top"><div class="wrap"><a href="../index.html">Ashwin Kumar Rangarajan</a><a href="../index.html#projects">← Back to Projects</a></div></header><main class="wrap"><div class="hero"><span class="eyebrow">HMI · CAN Integration</span><h1>Vehicle HMI on the MoTeC C1812 Display</h1><p class="org">Clemson University · Deep Orange 16 · Greenville, SC</p><p class="lede">A CAN-based vehicle HMI using the MoTeC C1812 display to present vehicle states, diagnostic alerts, driver information, and integration signals during prototype testing.</p><div class="case-study-tabs" role="tablist" aria-label="Project sections"><button class="project-tab" type="button" role="tab" id="tab-responsibilities" aria-controls="responsibilities" aria-selected="true" tabindex="0">Responsibilities</button><button class="project-tab" type="button" role="tab" id="tab-highlights" aria-controls="highlights" aria-selected="false" tabindex="-1">Highlights</button><button class="project-tab" type="button" role="tab" id="tab-integration" aria-controls="integration" aria-selected="false" tabindex="-1">Integration & Triage</button><button class="project-tab" type="button" role="tab" id="tab-features" aria-controls="features" aria-selected="false" tabindex="-1">Validation Scope</button><button class="project-tab" type="button" role="tab" id="tab-skillset" aria-controls="skillset" aria-selected="false" tabindex="-1">Skillset</button><button class="project-tab" type="button" role="tab" id="tab-gallery" aria-controls="gallery" aria-selected="false" tabindex="-1">Gallery</button></div></div><div class="sections"><section class="panel card" id="responsibilities" role="tabpanel" aria-labelledby="tab-responsibilities" tabindex="0"><ul><li>Develop a custom MoTeC C1812 GUI for real-time vehicle data, diagnostics, and driver alerts.</li><li>Integrate the display with the vehicle CAN communication architecture and wiring.</li><li>Implement multi-page navigation through steering-wheel-mounted buttons.</li><li>Validate displayed vehicle information and alerts during prototype regression testing.</li></ul></section><section class="panel card" id="highlights" role="tabpanel" aria-labelledby="tab-highlights" tabindex="0" hidden><ul><li>Solo-delivered the center-console HMI in two months, including vehicle CAN wiring integration.</li><li>Connected real-time diagnostics and alerts with an intuitive, driver-focused GUI.</li><li>Enabled steering-wheel button navigation between display pages.</li></ul></section><section class="panel card" id="integration" role="tabpanel" aria-labelledby="tab-integration" tabindex="0" hidden><ul><li>Map available vehicle signals to display information and diagnostic views.</li><li>Review signal behavior and displayed states during vehicle integration.</li><li>Use the HMI to support observation of prototype state changes and alerts.</li></ul></section><section class="panel card" id="features" role="tabpanel" aria-labelledby="tab-features" tabindex="0" hidden><ul><li>Real-time performance and diagnostic parameter visualization.</li><li>Driver alerts and vehicle-state information.</li><li>Steering-wheel button navigation across multiple pages.</li><li>CAN communication and vehicle wiring integration.</li></ul></section><section class="panel full card" id="skillset" role="tabpanel" aria-labelledby="tab-skillset" tabindex="0" hidden><div class="tags"><span class="tag">MoTeC C1812</span><span class="tag">CAN</span><span class="tag">HMI design</span><span class="tag">Vehicle-state visualization</span><span class="tag">Diagnostics</span><span class="tag">Prototype integration</span><span class="tag">CAN GUI development</span><span class="tag">Steering-wheel button integration</span><span class="tag">Vehicle CAN wiring</span><span class="tag">New Eagle interfaces</span></div></section><section class="panel full card" id="gallery" role="tabpanel" aria-labelledby="tab-gallery" tabindex="0" hidden><h3 class="overview-heading">Project Overview</h3><p class="responsibilities-overview">A CAN-based vehicle HMI using the MoTeC C1812 display to present vehicle states, diagnostic alerts, driver information, and integration signals during prototype testing.</p><div class="gallery" id="project-gallery"></div><div class="gallery" style="margin-top:20px"><figure><iframe src="https://www.youtube.com/embed/2rcx8ovRnnM" title="MoTeC C1812 HMI Demonstration" loading="lazy" allow="fullscreen" allowfullscreen style="width:100%;aspect-ratio:16/9;border:0;border-radius:10px"></iframe><figcaption>MoTeC C1812 HMI Demonstration</figcaption></figure></div><p class="empty" id="gallery-empty">Project photos coming soon.</p></section></div></main><footer class="footer"><div class="wrap"><a class="footer-back" href="../index.html#projects">← Back to Projects</a><br>Ashwin Kumar Rangarajan · Automotive Controls & Systems Integration<br><a href="../index.html#contact">Contact</a></div></footer><dialog id="gallery-viewer" aria-label="Project photo viewer"><form method="dialog"><button>Close ×</button></form><img id="gallery-large" alt=""><p id="gallery-caption"></p></dialog><script>
+</style><style id="remove-repeated-tab-headings">.sections > .panel > h2{display:none!important}</style>
+<style>#gallery-viewer{width:min(1100px,94vw);max-width:94vw;box-sizing:border-box}.gallery-stage{display:grid;grid-template-columns:42px minmax(0,1fr) 42px;gap:12px;align-items:center}#gallery-media img,#gallery-media video{display:block;width:100%;height:min(68vh,680px);object-fit:contain}#gallery-media iframe{display:block;width:100%;height:min(65vh,620px);border:0}#gallery-prev,#gallery-next{height:48px;border:1px solid #45617d;border-radius:10px;background:#14243a;color:#fff;font-size:24px;cursor:pointer}#gallery-position{text-align:center;color:#9bb3cb;font-size:12px}.gallery-video-preview{height:220px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;background:linear-gradient(135deg,#183650,#0b1728);color:#62ceff;font-size:48px}.gallery-video-preview span{font:600 14px Inter,system-ui,sans-serif}@media(max-width:600px){.gallery-stage{grid-template-columns:30px minmax(0,1fr) 30px;gap:5px}#gallery-prev,#gallery-next{font-size:18px}}</style><style>.project-skill-icons{display:flex;flex-wrap:wrap;gap:22px;align-items:center;padding:8px}.project-skill-icon{margin:0;width:112px;height:96px;display:grid;place-items:center;padding:0;border-radius:12px;background:#fff;border:1px solid #d7e2ed;box-sizing:border-box;transition:transform .2s,box-shadow .2s}.project-skill-icon:hover{transform:translateY(-3px);box-shadow:0 6px 18px #0004}.project-skill-icon img{display:block;width:80%;height:80%;object-fit:contain}@media(max-width:600px){.project-skill-icons{gap:14px}.project-skill-icon{width:92px;height:82px;padding:0}}</style><style id="gallery-media-layout-fix">#gallery-prev{grid-column:1;grid-row:1}#gallery-media{grid-column:2;grid-row:1;min-width:0;width:100%}#gallery-next{grid-column:3;grid-row:1}.gallery-stage.single-item{grid-template-columns:minmax(0,1fr)}.gallery-stage.single-item #gallery-media{grid-column:1}#gallery-media iframe{width:100%;height:auto;aspect-ratio:16/9;max-height:70vh;display:block}#gallery-prev[hidden],#gallery-next[hidden]{display:none!important}</style><style id="project-theme-correction">
+:root{--project-bg:#09121f;--project-panel:#101f32;--project-ink:#e8f0fb;--project-muted:#b9c9dc;--project-line:#30455f;--project-accent:#84d4fa;--project-tab:#14243a;--project-selected:#235880;--project-selected-ink:#fff}
+html[data-theme="light"]{color-scheme:light;--project-bg:#f4f8fc;--project-panel:#fff;--project-ink:#17344e;--project-muted:#496277;--project-line:#ccdde9;--project-accent:#0879b5;--project-tab:#eaf3fb;--project-selected:#17344e;--project-selected-ink:#fff}
+body{background:var(--project-bg)!important;color:var(--project-ink)!important}
+.top,.footer,.panel,.card,dialog{background:var(--project-panel)!important;color:var(--project-ink)!important;border-color:var(--project-line)!important}
+h1,h2,h3,h4,strong{color:var(--project-ink)!important}p,li,.org,.lede,.empty,figcaption,.responsibilities-overview{color:var(--project-muted)!important}
+a,.kicker,.eyebrow{color:var(--project-accent)}
+.case-study-tabs button{background:var(--project-tab)!important;color:var(--project-ink)!important;border:1px solid var(--project-line)!important;box-shadow:none!important}
+.case-study-tabs button[aria-selected="true"]{background:var(--project-selected)!important;color:var(--project-selected-ink)!important;border-color:var(--project-selected)!important}
+.project-skill-icon,.tag,.tags span{background:var(--project-tab)!important;color:var(--project-ink)!important;border-color:var(--project-line)!important}
+.flow-step{background:var(--project-tab)!important;border:1px solid var(--project-line)!important;border-radius:10px;padding:12px;min-width:0}
+.flow-step svg{width:26px;height:26px;color:var(--project-accent)}.flow-step small{display:none}.flow-step strong{display:block;font-size:13px}.flow-step p{font-size:12px}
+.validation-flow{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin:20px 0}.tags{display:flex;flex-wrap:wrap;gap:8px}.tag{padding:5px 9px;border-radius:18px;font-size:12px}.background-story{margin:22px 0 0;padding-top:18px;border-top:1px solid var(--project-line)}
+@media(max-width:550px){.validation-flow{grid-template-columns:repeat(2,minmax(0,1fr))}}
+</style><script>try{document.documentElement.dataset.theme=localStorage.getItem('portfolio-theme-v2')==='light'?'light':'dark'}catch(e){}</script><style id="project-theme-toggle-style">
+.project-theme-control{display:flex;justify-content:flex-end;padding:12px 20px;position:sticky;top:0;z-index:25;background:var(--project-bg,#09121f)}
+html[data-theme="light"] .project-theme-control{background:var(--project-bg,#f4f8fc)}
+.project-theme-button{display:inline-flex;align-items:center;gap:9px;border:1px solid var(--project-line,#30455f);border-radius:24px;padding:9px 15px;background:var(--project-tab,#14243a);color:var(--project-ink,#e8f0fb);font:600 13px/1.4 Inter,system-ui,sans-serif;cursor:pointer;min-height:42px}
+html[data-theme="light"] .project-theme-button{background:var(--project-tab,#eaf3fb);color:var(--project-ink,#17344e);border-color:var(--project-line,#ccdde9)}
+.project-theme-button:focus-visible{outline:2px solid currentColor;outline-offset:4px}.project-theme-button .theme-track{width:30px;height:16px;border-radius:12px;background:#557691;position:relative}.project-theme-button .theme-knob{position:absolute;width:12px;height:12px;top:2px;left:2px;border-radius:50%;background:#fff;transition:transform .2s}
+html[data-theme="light"] .project-theme-button .theme-knob{transform:translateX(14px)}
+@media(prefers-reduced-motion:reduce){.project-theme-button .theme-knob{transition:none}}
+</style><style id="portfolio-theme-switch-refinement">
+    /* Only the interior switch is pill-shaped; no enclosing oval. */
+    .portfolio-theme-toggle,
+    html[data-theme="light"] .portfolio-theme-toggle {
+      padding: 2px 0 !important;
+      gap: 11px !important;
+      border: 0 !important;
+      border-radius: 0 !important;
+      background: transparent !important;
+      box-shadow: none !important;
+      display: inline-flex;
+      align-items: center;
+      cursor: pointer;
+    }
+
+    .portfolio-theme-toggle:hover,
+    html[data-theme="light"] .portfolio-theme-toggle:hover {
+      background: transparent !important;
+      border: 0 !important;
+    }
+
+    .portfolio-theme-toggle .theme-symbol {
+      width: 21px;
+      height: 21px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      opacity: .44;
+      transition: color .25s, opacity .25s, filter .25s;
+    }
+
+    .portfolio-theme-toggle .theme-symbol svg {
+      width: 20px;
+      height: 20px;
+      display: block;
+    }
+
+    .portfolio-theme-toggle .theme-moon {
+      color: #7fcaff;
+      opacity: 1;
+      filter: drop-shadow(0 0 5px #60baff80);
+    }
+
+    .portfolio-theme-toggle .theme-sun {
+      color: #a3adc0;
+      opacity: .55;
+    }
+
+    html[data-theme="light"] .portfolio-theme-toggle .theme-moon {
+      color: #71849a;
+      opacity: .48;
+      filter: none;
+    }
+
+    html[data-theme="light"] .portfolio-theme-toggle .theme-sun {
+      color: #d88b0b;
+      opacity: 1;
+      filter: drop-shadow(0 0 4px #f3b34080);
+    }
+
+    .portfolio-theme-toggle .theme-switch-track {
+      width: 57px;
+      height: 30px;
+      position: relative;
+      border-radius: 999px;
+      background: linear-gradient(135deg, #132c49, #23466c) !important;
+      border: 1px solid #47749b !important;
+      box-shadow: inset 0 2px 5px #06101f99, 0 0 0 1px #ffffff0a;
+      transition: background .3s, border-color .3s, box-shadow .3s;
+    }
+
+    .portfolio-theme-toggle .theme-switch-thumb {
+      top: 3px;
+      left: 3px;
+      width: 22px;
+      height: 22px;
+      background: linear-gradient(145deg, #ffffff, #bfdaf9) !important;
+      box-shadow: 0 2px 7px #0008, inset 0 1px 1px #fff;
+      transition: transform .38s cubic-bezier(.2, .85, .2, 1), background .3s;
+    }
+
+    html[data-theme="light"] .portfolio-theme-toggle .theme-switch-track {
+      background: linear-gradient(135deg, #9fe0ff, #5db9f5) !important;
+      border-color: #499bd4 !important;
+      box-shadow: inset 0 1px 4px #2675a64d, 0 1px 4px #7fb6d54a;
+    }
+
+    html[data-theme="light"] .portfolio-theme-toggle .theme-switch-thumb {
+      transform: translateX(27px);
+      background: linear-gradient(145deg, #ffffff, #e9f5ff) !important;
+      box-shadow: 0 2px 6px #34698755, inset 0 1px 1px #fff;
+    }
+
+    .portfolio-theme-toggle:focus-visible {
+      outline: 2px solid #40c8ff !important;
+      outline-offset: 5px;
+      border-radius: 5px !important;
+    }
+
+    @media(max-width:650px) {
+
+      .portfolio-theme-toggle,
+      html[data-theme="light"] .portfolio-theme-toggle {
+        gap: 7px !important;
+      }
+    }
+
+    @media(prefers-reduced-motion:reduce) {
+
+      .portfolio-theme-toggle .theme-switch-thumb,
+      .portfolio-theme-toggle .theme-symbol {
+        transition: none !important;
+      }
+    }
+  .portfolio-theme-toggle .theme-switch-thumb{position:absolute;border-radius:50%;transform:translateX(0)}
+html[data-theme="light"] .portfolio-theme-toggle .theme-switch-thumb{transform:translateX(27px)}
+.portfolio-theme-toggle{min-height:44px}.portfolio-theme-toggle:focus-visible{outline:2px solid #489eda;outline-offset:5px}
+@media(prefers-reduced-motion:reduce){.portfolio-theme-toggle *{transition:none!important}}
+</style><style id="cornflower-section-labels">
+html{--section-label-color:#A8C5FF}
+html[data-theme="light"]{--section-label-color:#315DC4}
+html body .kicker,html body .eyebrow,html body #projects .featured-story-category,html body .story-kicker,html body .hero-intro-slide::before{color:var(--section-label-color)!important}
+</style><style id="project-page-theme">html body{font-family:Inter,system-ui,sans-serif;position:relative;min-height:100vh;line-height:1.65}
+html:not([data-theme="light"]) body{background:#1c2027!important;color:#e8eefb!important}
+html[data-theme="light"] body{background:#f4f7fb!important;color:#17344e!important}
+html:not([data-theme="light"]) body::before{content:"";position:absolute;inset:0 0 auto 0;height:560px;z-index:-1;pointer-events:none;background:linear-gradient(180deg,#343b46 0%,#2d333d 45%,rgba(28,32,39,0) 100%)}
+html[data-theme="light"] body::before{content:"";position:absolute;inset:0 0 auto 0;height:460px;z-index:-1;pointer-events:none;background:linear-gradient(180deg,#d6e6f8 0%,rgba(244,247,251,0) 100%)}
+/* header, same look as the main page */
+html body .top{position:sticky;top:0;z-index:30;padding:0!important;backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px)}
+html:not([data-theme="light"]) body .top{background:rgba(22,26,32,.85)!important;border-bottom:1px solid rgba(255,255,255,.08)!important}
+html[data-theme="light"] body .top{background:rgba(255,255,255,.95)!important;border-bottom:1px solid #cfdaea!important}
+.top .top-inner{height:68px;display:flex!important;flex-wrap:nowrap!important;align-items:center;justify-content:space-between;gap:16px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:800;text-decoration:none!important;color:inherit!important;min-width:0}
+html:not([data-theme="light"]) .brand{color:#e8eefb!important}
+html[data-theme="light"] .brand{color:#173450!important}
+.brand-mark{flex:none;width:36px;height:36px;border-radius:12px;background:linear-gradient(135deg,#45d9ff,#6692ff);display:grid;place-items:center;color:#06111d;font-weight:900;font-size:14px}
+.top-actions{display:flex;align-items:center;gap:18px;flex:none}
+.back-pill{padding:6px 14px;border:1px solid currentColor;border-radius:999px;font-weight:700;font-size:14px;text-decoration:none!important;white-space:nowrap}
+html:not([data-theme="light"]) .back-pill{color:#cfe3f7!important}
+html[data-theme="light"] .back-pill{color:#173450!important}
+.back-pill:hover{border-color:#45d9ff}
+.top-actions .portfolio-theme-toggle{position:static!important;margin:0!important}
+/* title block */
+html body .hero{padding:56px 0 30px}
+html body .eyebrow{font-size:14px;letter-spacing:.1em;font-weight:900}
+html:not([data-theme="light"]) .eyebrow{color:#8fb4ff!important}
+html[data-theme="light"] .eyebrow{color:#2f5fd0!important}
+html body h1{font-weight:800;letter-spacing:-.035em}
+html:not([data-theme="light"]) h1{color:#eef5ff!important}
+html[data-theme="light"] h1{color:#152d46!important}
+html:not([data-theme="light"]) .org{color:#9fb3c8!important}
+html[data-theme="light"] .org{color:#496277!important}
+/* tabs */
+html body .project-tab{border-radius:999px!important;padding:9px 20px!important;font-weight:700;font-size:14px;border:1px solid!important;cursor:pointer;transition:transform .2s ease,box-shadow .2s ease}
+html:not([data-theme="light"]) .project-tab{background:#252a32!important;border-color:#3a414c!important;color:#cfdae8!important}
+html[data-theme="light"] .project-tab{background:#fff!important;border-color:#ccdde9!important;color:#17344e!important}
+html body .project-tab[aria-selected="true"]{background:linear-gradient(135deg,#8febff,#a6bfff)!important;border-color:transparent!important;color:#06111d!important}
+.project-tab:hover{transform:translateY(-2px)}
+/* cards */
+html body .panel,html body .card{border-radius:16px!important;padding:26px}
+html:not([data-theme="light"]) .panel,html:not([data-theme="light"]) .card{background:#252a32!important;border:1px solid #3a414c!important;box-shadow:0 14px 36px rgba(0,0,0,.28)!important;color:#c9d6e6}
+html[data-theme="light"] .panel,html[data-theme="light"] .card{background:#fff!important;border:1px solid #ccdde9!important;box-shadow:0 12px 30px rgba(23,52,80,.08)!important;color:#3f566b}
+.panel li::marker{color:#45d9ff}
+html[data-theme="light"] .panel li::marker{color:#0879b5}
+html:not([data-theme="light"]) .panel li{color:#c9d6e6!important}
+html[data-theme="light"] .panel li{color:#3f566b!important}
+html:not([data-theme="light"]) .panel h2,html:not([data-theme="light"]) .panel h3{color:#eef5ff!important}
+html[data-theme="light"] .panel h2,html[data-theme="light"] .panel h3{color:#152d46!important}
+html body .tag{border-radius:999px!important;font-weight:700}
+html:not([data-theme="light"]) .tag{background:rgba(69,217,255,.1)!important;border:1px solid rgba(69,217,255,.28)!important;color:#bdefff!important}
+html[data-theme="light"] .tag{background:#e6eefb!important;border:1px solid #c8dbe9!important;color:#1f4f87!important}
+html body .gallery button{border-radius:12px!important}
+html:not([data-theme="light"]) .gallery button{background:#252a32!important;border-color:#3a414c!important}
+html[data-theme="light"] .gallery button{background:#fff!important;border-color:#ccdde9!important}
+html:not([data-theme="light"]) .gallery figcaption{color:#9fb3c8!important}
+html[data-theme="light"] .gallery figcaption{color:#496277!important}
+/* previous / next */
+.proj-pager{display:flex;gap:14px;flex-wrap:wrap;margin:10px 0 56px}
+.pager-card{flex:1 1 260px;padding:16px 18px;border-radius:16px;border:1px solid;text-decoration:none!important;transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease}
+.pager-card.next{text-align:right}
+html:not([data-theme="light"]) .pager-card{background:#252a32;border-color:#3a414c}
+html[data-theme="light"] .pager-card{background:#fff;border-color:#ccdde9;box-shadow:0 8px 22px rgba(23,52,80,.06)}
+.pager-card:hover{transform:translateY(-2px);border-color:#45d9ff;box-shadow:0 14px 30px rgba(0,0,0,.2)}
+.pager-dir{display:block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;font-weight:800}
+html:not([data-theme="light"]) .pager-dir{color:#7fd8ff}
+html[data-theme="light"] .pager-dir{color:#2f5fd0}
+.pager-title{display:block;margin-top:4px;font-weight:700}
+html:not([data-theme="light"]) .pager-title{color:#eef5ff}
+html[data-theme="light"] .pager-title{color:#152d46}
+/* footer */
+html body .footer{border-top:1px solid}
+html:not([data-theme="light"]) .footer{background:#20252d!important;border-color:rgba(255,255,255,.08)!important;color:#9fb3c8!important}
+html[data-theme="light"] .footer{background:#eaf1f8!important;border-color:#d0ddeb!important;color:#456078!important}
+html body .footer-back{border-radius:999px!important;font-weight:700}
+html:not([data-theme="light"]) .footer-back{background:#252a32!important;border-color:#3a414c!important;color:#cfe3f7!important}
+html[data-theme="light"] .footer-back{background:#fff!important;border-color:#ccdde9!important;color:#173450!important}
+html:not([data-theme="light"]) dialog{background:#1c2027!important;border-color:#3a414c!important}
+@media(max-width:560px){.brand-name{display:none}.top .top-inner{height:60px}.top-actions{gap:12px}.pager-card.next{text-align:left}}
+</style><style id="accomplishment-tile">.accomplishment{display:flex;flex-direction:column;gap:3px;margin:18px 0 6px;padding:14px 16px 15px;max-width:640px;border-radius:14px;border:1px solid rgba(123,227,174,.28);border-left:4px solid #54d696;background:linear-gradient(135deg,rgba(84,214,150,.12),rgba(69,217,255,.06))}.accomplishment .acc-label{font-size:10.5px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#7be3ae}.accomplishment .acc-num{font-size:24px;line-height:1.25;font-weight:800;letter-spacing:-.01em;background:linear-gradient(135deg,#b8f5d5,#8febff);-webkit-background-clip:text;background-clip:text;color:transparent}.accomplishment .acc-cap{font-size:14px;line-height:1.55;color:var(--project-muted,#b9c9dc)}html[data-theme="light"] .accomplishment{border-color:#bfe8d3;border-left-color:#2fa56c;background:linear-gradient(135deg,#eaf8f1,#eef6ff)}html[data-theme="light"] .accomplishment .acc-label{color:#17643f}html[data-theme="light"] .accomplishment .acc-num{background:linear-gradient(135deg,#17643f,#1f5fbf);-webkit-background-clip:text;background-clip:text;color:transparent}html[data-theme="light"] .accomplishment .acc-cap{color:#496277}@media print{.accomplishment .acc-num{background:none;color:#000;-webkit-text-fill-color:#000}}</style><style id="pager-refresh">.skip-link{position:absolute;left:12px;top:-60px;z-index:100;padding:10px 16px;border-radius:999px;background:linear-gradient(135deg,#8febff,#a6bfff);color:#06111d!important;font-weight:700;text-decoration:none!important;transition:top .15s ease}.skip-link:focus{top:12px;outline:3px solid #fff;outline-offset:2px}html:root a.footer-back{display:inline-flex;align-items:center;gap:6px;padding:9px 18px!important;border:0!important;border-radius:999px!important;background:linear-gradient(135deg,#8febff,#a6bfff)!important;color:#06111d!important;font-weight:700;text-decoration:none!important;transition:transform .2s ease,box-shadow .2s ease}html:root a.footer-back:hover{transform:translateY(-2px);box-shadow:0 8px 22px rgba(69,217,255,.3)}html:root a.footer-back:focus-visible{outline:3px solid #fff;outline-offset:3px;box-shadow:0 0 0 6px rgba(69,217,255,.55)}html[data-theme="light"]:root a.footer-back:focus-visible{outline-color:#17344e;box-shadow:none}.pager-card:hover{border-color:#8febff;box-shadow:0 12px 30px rgba(69,217,255,.18)}.pager-card:focus-visible{outline:3px solid #8febff;outline-offset:3px}html[data-theme="light"] .pager-card:hover{border-color:#0879b5;box-shadow:0 12px 28px rgba(8,121,181,.16)}.pager-dir{transition:letter-spacing .2s ease}.pager-card:hover .pager-dir{letter-spacing:.16em}@media(prefers-reduced-motion:reduce){.pager-card:hover .pager-dir{letter-spacing:inherit}}</style><style id="proj-banner">.proj-banner{height:clamp(150px,30vw,270px);margin:0 0 26px;border-radius:18px;border:1px solid rgba(128,140,165,.28);background-repeat:no-repeat;overflow:hidden}html:not([data-theme="light"]) .proj-banner{filter:brightness(.94)}@media print{.proj-banner{display:none}}</style></head><body><a class="skip-link" href="#main" onclick="document.getElementById('main').focus();return false">Skip to main content</a><header class="top"><div class="wrap top-inner"><a class="brand" href="../index.html"><span class="brand-mark">AK</span><span class="brand-name">Ashwin Kumar Rangarajan</span></a><div class="top-actions"><a class="back-pill" href="../index.html#projects">← Back to Projects</a><button class="portfolio-theme-toggle project-theme-button" id="portfolio-theme-toggle" type="button" role="switch"
+        aria-label="Light mode" aria-checked="false" title="Toggle light and dark mode">
+        <span class="theme-symbol theme-moon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M20.8 15.8A9 9 0 0 1 8.2 3.2 9 9 0 1 0 20.8 15.8Z" />
+          </svg></span>
+        <span class="theme-switch-track" aria-hidden="true"><span class="theme-switch-thumb"></span></span>
+        <span class="theme-symbol theme-sun" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round">
+            <circle cx="12" cy="12" r="4" />
+            <path
+              d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42" />
+          </svg></span>
+      </button></div></div></header><main class="wrap" id="main" tabindex="-1"><div class="hero"><div class="proj-banner" role="img" aria-label="MoTeC C1812 display showing live vehicle data" style="background-image:url(../assets/img/photo-hmi-motec.webp);background-size:contain;background-position:center;background-color:#fff"></div><span class="eyebrow">HMI · CAN Integration</span><h1>Vehicle HMI on the MoTeC C1812 Display</h1><p class="org">Clemson University · Deep Orange 16 · Greenville, SC</p><div class="accomplishment"><span class="acc-label">Accomplishment</span><strong class="acc-num">Faster debugging with live dashboard alerts</strong><span class="acc-cap">Drivers saw faults on the dashboard instead of relying on XCP-only debugging.</span></div><div class="case-study-tabs" role="tablist" aria-label="Project sections"><button class="project-tab" type="button" role="tab" id="tab-highlights" aria-controls="highlights" aria-selected="false" tabindex="-1">Highlights</button><button class="project-tab" type="button" role="tab" id="tab-skillset" aria-controls="skillset" aria-selected="false" tabindex="-1">Skillset</button><button class="project-tab" type="button" role="tab" id="tab-gallery" aria-controls="gallery" aria-selected="false" tabindex="-1">Gallery</button></div></div><div class="sections"><section class="panel card" id="highlights" role="tabpanel" aria-labelledby="tab-highlights" tabindex="0" hidden><ul><li>Sole engineer on the center-console HMI bring-up, delivered in under 6 weeks, including vehicle CAN wiring integration.</li><li>Connected real-time diagnostics and alerts with an intuitive, driver-focused GUI.</li><li>Enabled steering-wheel button navigation between display pages.</li></ul></section><section class="panel full card" id="skillset" role="tabpanel" aria-labelledby="tab-skillset" tabindex="0" hidden><div class="tags"><span class="tag">MoTeC C1812</span><span class="tag">CAN</span><span class="tag">HMI design</span><span class="tag">Vehicle-state visualization</span><span class="tag">Diagnostics</span><span class="tag">Prototype integration</span><span class="tag">CAN GUI development</span><span class="tag">Steering-wheel button integration</span><span class="tag">Vehicle CAN wiring</span><span class="tag">New Eagle interfaces</span></div></section><section class="panel full card" id="gallery" role="tabpanel" aria-labelledby="tab-gallery" tabindex="0" hidden><div class="gallery" id="project-gallery"></div><div class="gallery" style="margin-top:20px"><figure><figcaption>MoTeC C1812 HMI Demonstration</figcaption></figure></div><p class="empty" id="gallery-empty">Project photos coming soon.</p></section></div><nav class="proj-pager" aria-label="More projects"><a class="pager-card" href="../index.html#projects/vehicle-dynamics-motion-control.html"><span class="pager-dir">← Previous project</span><span class="pager-title">Direct Yaw Moment Control for a Hub-Motor Vehicle</span></a><a class="pager-card next" href="../index.html#projects/chassis-testing-validation.html"><span class="pager-dir">Next project →</span><span class="pager-title">ABS Calibration, Traction Control &amp; Chassis Validation</span></a></nav></main><footer class="footer"><div class="wrap"><a class="footer-back" href="../index.html#projects">← Back to Projects</a><br>Ashwin Kumar Rangarajan · Automotive Controls & Systems Integration<br><a href="../index.html#contact">Contact</a></div></footer><dialog id="gallery-viewer" aria-label="Project gallery viewer"><form method="dialog"><button aria-label="Close gallery">Close ×</button></form><div class="gallery-stage"><button type="button" id="gallery-prev" aria-label="Previous gallery item">❮</button><div id="gallery-media"></div><button type="button" id="gallery-next" aria-label="Next gallery item">❯</button></div><p id="gallery-caption"></p><p id="gallery-position"></p></dialog><script>
 // Add the project-specific gallery images here. Paths are relative to this page.
 // Example: {url:'../assets/photos/bench.jpg',caption:'HIL bench',alt:'HIL test bench'}
-const galleryImages = [];
+const galleryImages = [{"url": "https://www.youtube.com/embed/2rcx8ovRnnM", "caption": "MoTeC HMI Demonstration", "type": "embed"}];
 const gallery=document.getElementById('project-gallery');
 const viewer=document.getElementById('gallery-viewer');
-galleryImages.forEach(photo=>{
- const figure=document.createElement('figure'),button=document.createElement('button'),img=document.createElement('img'),caption=document.createElement('figcaption');
- button.type='button';button.setAttribute('aria-label','View '+(photo.caption||'project photo'));button.setAttribute('aria-haspopup','dialog');
- img.src=photo.url;img.alt=photo.alt||photo.caption||'Project photo';img.loading='lazy';caption.textContent=photo.caption||'';
- button.appendChild(img);figure.append(button,caption);gallery.appendChild(figure);
- button.addEventListener('click',()=>{document.getElementById('gallery-large').src=photo.url;document.getElementById('gallery-large').alt=img.alt;document.getElementById('gallery-caption').textContent=caption.textContent;viewer.showModal();});
+const media=document.getElementById('gallery-media');
+let currentMedia=0;
+viewer.querySelector('.gallery-stage').classList.toggle('single-item',galleryImages.length===1);
+function clearMedia(){media.querySelectorAll('video').forEach(video=>video.pause());media.replaceChildren();}
+function showMedia(index){
+ currentMedia=(index+galleryImages.length)%galleryImages.length;
+ clearMedia();
+ const item=galleryImages[currentMedia];
+ let element;
+ if(item.type==='embed'){
+  element=document.createElement('iframe');element.src=item.url;element.title=item.caption||'Project video';element.allow='fullscreen; encrypted-media; picture-in-picture';element.allowFullscreen=true;
+ }else if(item.type==='video'){
+  element=document.createElement('video');element.src=item.url;element.controls=true;element.preload='metadata';element.playsInline=true;
+ }else{
+  element=document.createElement('img');element.src=item.url;element.alt=item.alt||item.caption||'Project image';
+ }
+ media.appendChild(element);
+ document.getElementById('gallery-caption').textContent=item.caption||'';
+ document.getElementById('gallery-position').textContent=(currentMedia+1)+' / '+galleryImages.length;
+ ['gallery-prev','gallery-next'].forEach(id=>document.getElementById(id).hidden=galleryImages.length<2);
+}
+galleryImages.forEach((item,index)=>{
+ const figure=document.createElement('figure'),button=document.createElement('button'),caption=document.createElement('figcaption');
+ button.type='button';button.setAttribute('aria-label','Open '+(item.caption||'gallery item'));button.setAttribute('aria-haspopup','dialog');
+ if(item.type==='embed'||item.type==='video'){
+  const preview=document.createElement('span');preview.className='gallery-video-preview';preview.textContent='▶';
+  const label=document.createElement('span');label.textContent='View video';preview.appendChild(label);button.appendChild(preview);
+ }else{
+  const img=document.createElement('img');img.src=item.url;img.alt=item.alt||item.caption||'Project image';img.loading='lazy';button.appendChild(img);
+ }
+ caption.textContent=item.caption||'';figure.append(button,caption);gallery.appendChild(figure);
+ button.addEventListener('click',()=>{showMedia(index);viewer.showModal();});
 });
-document.getElementById('gallery-empty').hidden=galleryImages.length>0 || document.querySelector('#gallery iframe') !== null;
+document.getElementById('gallery-empty').hidden=galleryImages.length>0;
+document.getElementById('gallery-prev').addEventListener('click',()=>showMedia(currentMedia-1));
+document.getElementById('gallery-next').addEventListener('click',()=>showMedia(currentMedia+1));
+viewer.addEventListener('keydown',event=>{
+ if(event.target.matches('video,iframe'))return;
+ if(event.key==='ArrowLeft'){event.preventDefault();showMedia(currentMedia-1);}
+ if(event.key==='ArrowRight'){event.preventDefault();showMedia(currentMedia+1);}
+});
 viewer.addEventListener('click',event=>{if(event.target===viewer)viewer.close();});
+viewer.addEventListener('close',clearMedia);
 </script><script>
 (()=>{
  const tabs=Array.from(document.querySelectorAll('.case-study-tabs [role="tab"]'));
@@ -56,13 +305,14 @@ viewer.addEventListener('click',event=>{if(event.target===viewer)viewer.close();
   tabs.forEach(button=>{
    const active=button===tab;
    // TAB COLOR FIX: selected blue, other tabs dark.
-   button.style.setProperty('background',active?'linear-gradient(135deg,#36d3ee,#638cff)':'#14243a','important');
-   button.style.setProperty('color',active?'#07121f':'#cbd5e1','important');
-   button.style.setProperty('border',active?'1px solid #70caf3':'1px solid #334155','important');
-   button.style.setProperty('box-shadow','none','important');
+   
+   
+   
+   
 
    button.setAttribute('aria-selected',String(active));button.tabIndex=active?0:-1;
    document.getElementById(button.getAttribute('aria-controls')).hidden=!active;
+   if(active)document.getElementById(button.getAttribute('aria-controls')).animate([{opacity:0,transform:'translateY(12px)'},{opacity:1,transform:'translateY(0)'}],{duration:350,easing:'ease-out'});
   });
   if(updateHash)history.replaceState(null,'','#'+tab.getAttribute('aria-controls'));
   if(focus)tab.focus();
@@ -81,5 +331,11 @@ viewer.addEventListener('click',event=>{if(event.target===viewer)viewer.close();
   });
  });
  window.addEventListener('hashchange',fromHash);fromHash();
+})();
+</script><script id="project-theme-toggle-script">
+(()=>{const button=document.querySelector('.project-theme-button');
+function update(){const light=document.documentElement.dataset.theme==='light';button.setAttribute('aria-label',light?'Switch to dark mode':'Switch to light mode');button.setAttribute('aria-checked',String(light));button.setAttribute('title',light?'Switch to dark mode':'Switch to light mode');}
+button.addEventListener('click',()=>{const theme=document.documentElement.dataset.theme==='light'?'dark':'light';if(top.setPortfolioTheme){top.setPortfolioTheme(theme)}else{document.documentElement.dataset.theme=theme;try{localStorage.setItem('portfolio-theme-v2',theme)}catch(e){}}update()});
+new MutationObserver(update).observe(document.documentElement,{attributes:true,attributeFilter:['data-theme']});update();
 })();
 </script></body></html>
