@@ -2559,3 +2559,9 @@ html:not([data-theme="light"]) #projects :is(.photo-hmi,.photo-yaw,.photo-sbw)::
 /* Rivian hackathon photo header */
 #projects .photo-rivian::before{background-image:url("img/photo-rivian-hackathon.webp");background-size:cover;background-position:center 42%;background-color:#f3f3f4;background-repeat:no-repeat}
 html:not([data-theme="light"]) #projects .photo-rivian::before{filter:brightness(.92)}
+
+#projects .photo-hmi::before{background-color:#fff;background-size:contain;background-position:center 30%}
+
+.cert-card .cert-date{font-weight:700;color:var(--text,inherit)}
+html:not([data-theme="light"]) .cert-card .cert-date{color:#e8eefc}
+html[data-theme="light"] .cert-card .cert-date{color:#12233d}
